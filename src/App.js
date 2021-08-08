@@ -2,7 +2,7 @@ import HomePage from "./pages/HomePage";
 
 export default function App() {
   return (
-    <div class="container">
+    <div className="container">
       <HomePage />
     </div>
   );

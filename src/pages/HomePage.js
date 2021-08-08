@@ -2,7 +2,7 @@ import HomeTitle from "../components/HomeTitle";
 
 export default function HomePage() {
   return (
-    <div class="home-page">
+    <div className="home-page">
       <HomeTitle />
     </div>
   );
