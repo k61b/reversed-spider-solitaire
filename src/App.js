@@ -1,3 +1,9 @@
+import HomePage from "./pages/HomePage";
+
 export default function App() {
-  return <div>Hello, World</div>;
+  return (
+    <div class="container">
+      <HomePage />
+    </div>
+  );
 }
