@@ -1,3 +1,9 @@
+import NavBar from "../components/NavBar";
+
 export default function GamePage() {
-  return <div>Hello, world.</div>;
+  return (
+    <div className="GamePage">
+      <NavBar />
+    </div>
+  );
 }
