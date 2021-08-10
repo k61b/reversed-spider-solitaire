@@ -1,9 +1,28 @@
+.home-page{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.home-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  color: var(--light-color);
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
 .start-button-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .start-button {
