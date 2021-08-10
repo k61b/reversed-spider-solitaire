@@ -1,0 +1,32 @@
+@import "home.css";
+
+:root {
+  --main-color: rgb(16, 151, 16);
+  --dark-color: #000;
+  --light-color: rgb(216, 216, 216);
+  --min-font-size: 1rem;
+  --mid-font-size: 1.5rem;
+  --max-font-size: 3rem;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+.container {
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
