@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-export function StartButton() {
+export function StartButton({ start }) {
   return (
     <div className="start-button-container">
-      <Link className="start-button" to="/game">
+      <Link onClick={start} className="start-button" to="/game">
         Start
       </Link>
     </div>
