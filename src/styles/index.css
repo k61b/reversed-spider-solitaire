@@ -1,4 +1,5 @@
 @import "home.css";
+@import "game.css";
 
 :root {
   --main-color: rgb(16, 151, 16);
