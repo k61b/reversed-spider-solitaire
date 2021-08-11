@@ -1,4 +1,11 @@
 .navbar {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4% 0;
 }
