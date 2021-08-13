@@ -1,18 +1,32 @@
 /* eslint-disable default-case */
 export function getRank(rank) {
-  if (rank === "K" || rank === "Q" || rank === "J" || rank === "A") {
-    switch (rank) {
-      case "K":
-        return 13;
-      case "Q":
-        return 12;
-      case "J":
-        return 11;
-      case "A":
-        return 1;
-    }
-  } else {
-    return parseInt(rank);
+  switch (rank) {
+    case "K":
+      return 1;
+    case "Q":
+      return 2;
+    case "J":
+      return 3;
+    case "10":
+      return 4;
+    case "9":
+      return 5;
+    case "8":
+      return 6;
+    case "7":
+      return 7;
+    case "6":
+      return 8;
+    case "5":
+      return 9;
+    case "4":
+      return 10;
+    case "3":
+      return 11;
+    case "2":
+      return 12;
+    case "A":
+      return 13;
   }
 }
 
