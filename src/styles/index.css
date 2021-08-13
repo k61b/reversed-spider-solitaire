@@ -2,7 +2,7 @@
 @import "game.css";
 
 :root {
-  --main-color: rgb(16, 151, 16);
+  --main-color: rgb(30, 27, 194);
   --dark-color: #000;
   --light-color: rgb(216, 216, 216);
   --min-font-size: 1rem;
@@ -14,11 +14,11 @@ html,
 body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--main-color);
 }
 
 * {
   box-sizing: border-box;
-  background-color: var(--main-color);
 }
 
 a {
