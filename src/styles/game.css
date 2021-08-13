@@ -1,9 +1,12 @@
 @import "./game/card.css";
 @import "./game/card-holder.css";
+@import "./game/navbar.css";
 
-.navbar {
+.game-page {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
 }
 
 .game-content {
