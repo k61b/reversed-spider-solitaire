@@ -11,7 +11,7 @@ describe("HomePage", () => {
     context = render(
       <Router history={history}>
         <HomePage />
-      </Router>
+      </Router>,
     );
   });
 

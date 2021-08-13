@@ -10,7 +10,7 @@ export function populateCards() {
         rank: rank,
         suit: "spade",
         isDown: true,
-        deck: 1,
+        deck: i,
         isSelected: false,
         isHighlighted: false,
       });
