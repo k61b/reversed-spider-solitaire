@@ -41,6 +41,14 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
   return (
     <div className="game-page">
       <NavBar seconds={seconds} minutes={minutes} hours={hours} reset={reset} />
+      {cards.hasOwnProperty("decks") && game.decks[10].length > 0 && (
+        <div
+          onClick={e => {
+            distributeRemCards(game, setGame);
+          }}
+          className="card card__down card__remcards"
+        ></div>
+      )}
       <div className="game-content">
         {cards.hasOwnProperty("decks") &&
           game.decks.slice(0, 10).map((deck, index) => (
@@ -107,14 +115,6 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
               )}
             </>
           ))}
-        {cards.hasOwnProperty("decks") && game.decks[10].length > 0 && (
-          <div
-            onClick={e => {
-              distributeRemCards(game, setGame);
-            }}
-            className="card card__down card__remcards"
-          ></div>
-        )}
       </div>
     </div>
   );
