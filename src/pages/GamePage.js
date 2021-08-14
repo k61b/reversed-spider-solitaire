@@ -19,7 +19,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
     highlightedCard: "",
   });
 
-  useEffect(() => {
+  function getCards() {
     const val = populateCards();
     setCards(val);
     setGame(prevState => ({
@@ -27,11 +27,25 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
       cards: val.cards,
       decks: val.decks,
     }));
+  }
+
+  useEffect(() => {
+    getCards();
   }, []);
+
+  function handleClick() {
+    getCards();
+  }
 
   return (
     <div className="game-page">
-      <NavBar seconds={seconds} minutes={minutes} hours={hours} reset={reset} />
+      <NavBar
+        handleClick={handleClick}
+        seconds={seconds}
+        minutes={minutes}
+        hours={hours}
+        reset={reset}
+      />
       <div className="game-tools">
         {cards.hasOwnProperty("decks") && game.decks[10].length > 0 && (
           <div
