@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  border: 1px solid black;
+  border: 1px solid var(--dark-color);
   cursor: pointer;
   width: 7vw;
   height: 9.8vw;

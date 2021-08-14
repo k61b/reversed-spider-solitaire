@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { populateCards } from "../logic/game";
-import { distributeRemCards } from "../logic/index";
 import NavBar from "../components/NavBar";
 import GameContent from "../components/GameContent";
+import GameTool from "../components/GameTool";
 
 export default function GamePage({ seconds, minutes, hours, reset }) {
   const [cards, setCards] = useState({});
@@ -46,16 +46,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
         hours={hours}
         reset={reset}
       />
-      <div className="game-tools">
-        {cards.hasOwnProperty("decks") && game.decks[10].length > 0 && (
-          <div
-            onClick={e => {
-              distributeRemCards(game, setGame);
-            }}
-            className="card card__down card__remcards"
-          ></div>
-        )}
-      </div>
+      <GameTool cards={cards} game={game} setGame={setGame} />
       <GameContent cards={cards} game={game} setGame={setGame} />
     </div>
   );

@@ -1,0 +1,32 @@
+.game-tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0% 1%;
+}
+
+.game-tool-card {
+  border: 1px solid var(--dark-color);
+  cursor: pointer;
+  width: 7vw;
+  height: 9.8vw;
+  border-radius: 0.3vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/card_back.png");
+  text-decoration: transparent;
+}
+
+.right-game-tool {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.game-tool-item {
+  border: 1px solid var(--dark-color);
+  box-shadow: 5px 5px 5px 5px rgba(250, 250, 250, 0.5);
+  width: 7vw;
+  height: 9.8vw;
+  border-radius: 0.3vw;
+}
