@@ -1,17 +1,17 @@
 @import "./game/card.css";
 @import "./game/card-holder.css";
 @import "./game/navbar.css";
+@import "./game/game-tool.css";
 
 .game-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .game-content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 4% 0;
+  padding-bottom: 2%;
 }
