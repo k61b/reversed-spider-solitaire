@@ -1,4 +1,9 @@
-export function NavBar({ seconds, minutes, hours, reset }) {
+export function NavBar({ handleClick, seconds, minutes, hours, reset }) {
+  function handleReset() {
+    handleClick();
+    reset();
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-item navbar-timer">
@@ -20,7 +25,7 @@ export function NavBar({ seconds, minutes, hours, reset }) {
         </div>
       </div>
       <div className="navbar-item">
-        <button className="navbar-restart-button" onClick={reset}>
+        <button className="navbar-restart-button" onClick={handleReset}>
           Restart
         </button>
       </div>
