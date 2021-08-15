@@ -16,10 +16,10 @@ describe("GamePage", () => {
   });
 
   it("displays the navbar", () => {
-    const navText = "Highest Score Ever:";
+    const buttonText = "Restart";
 
     const { queryByText } = context;
 
-    expect(queryByText(navText)).not.toBeNull();
+    expect(queryByText(buttonText)).not.toBeNull();
   });
 });
