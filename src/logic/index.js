@@ -77,7 +77,7 @@ export function removeSelection(game, setgame) {
 
 export function selectCard(card, deck, holder, game, setgame) {
   if (holder && game.selectedCard !== "") {
-    if (game.selectedCard.rank === "K") {
+    if (game.selectedCard.rank === "A") {
       moveCards(deck, game.selectedDeck, game.selectedCard, setgame, game);
       isHandComplete(deck, game, setgame);
       removeSelection(game, setgame);
@@ -120,6 +120,7 @@ export function moveCards(toDeck, fromDeck, fromCard, setgame, game) {
   let to = tempDeck.indexOf(toDeck);
   let from = tempDeck.indexOf(fromDeck);
   let cardIdx = tempDeck[from].indexOf(fromCard);
+  let newScore = game.score;
 
   let movedCards = tempDeck[from].splice(cardIdx);
 
@@ -129,6 +130,7 @@ export function moveCards(toDeck, fromDeck, fromCard, setgame, game) {
   try {
     if (tempDeck[from][tempDeck[from].length - 1].isDown === true) {
       tempDeck[from][tempDeck[from].length - 1].isDown = false;
+      newScore--;
     }
   } catch (err) {
     console.log(err);
@@ -136,6 +138,7 @@ export function moveCards(toDeck, fromDeck, fromCard, setgame, game) {
   setgame(prevState => ({
     ...prevState,
     decks: tempDeck,
+    score: newScore,
   }));
 }
 
@@ -173,6 +176,7 @@ export function isHandComplete(deck, game, setgame) {
     let curDeckIdx = tempDecks.indexOf(deck);
     tempDecks[curDeckIdx].splice(len);
     let curHands = game.hands;
+    let curScore = game.score;
     if (tempDecks[curDeckIdx].length !== 0) {
       tempDecks[curDeckIdx][tempDecks[curDeckIdx].length - 1].isDown = false;
     }
@@ -180,6 +184,7 @@ export function isHandComplete(deck, game, setgame) {
       ...prevState,
       decks: tempDecks,
       hands: curHands + 1,
+      score: curScore + 100,
     }));
     if (curHands + 1 === 8) console.log("Game Over");
   }
@@ -309,6 +314,7 @@ export function drop(event, card, game, setgame) {
 export function distributeRemCards(game, setgame) {
   if (game.decks[10].length !== 0) {
     let tempDecks = [...game.decks];
+    let curScore = game.score;
     tempDecks.forEach(tempDeck => {
       if (tempDecks[10].length > 0) {
         let tempCard = tempDecks[10].pop();
@@ -319,6 +325,7 @@ export function distributeRemCards(game, setgame) {
     setgame(prevState => ({
       ...prevState,
       decks: tempDecks,
+      score: curScore - 50,
     }));
     tempDecks.forEach(tempDeck => {
       isHandComplete(tempDeck, game, setgame);

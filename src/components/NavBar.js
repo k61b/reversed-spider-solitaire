@@ -1,4 +1,4 @@
-export function NavBar({ handleClick, seconds, minutes, hours, reset }) {
+export function NavBar({ handleClick, seconds, minutes, hours, reset, game }) {
   function handleReset() {
     handleClick();
     reset();
@@ -15,7 +15,7 @@ export function NavBar({ handleClick, seconds, minutes, hours, reset }) {
       <div className="navbar-item navbar-score">
         Score:
         <div className="navbar-board">
-          <span>100</span>
+          <span>{game.score}</span>
         </div>
       </div>
       <div className="navbar-item">

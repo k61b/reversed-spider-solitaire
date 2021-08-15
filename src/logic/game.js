@@ -3,6 +3,7 @@ import cardInfo from "../utils/cardInfo.json";
 export function populateCards() {
   let cards = [];
   let decks;
+  let score = 500;
 
   cardInfo["rank"].forEach(rank => {
     for (let i = 1; i <= 8; i++) {
@@ -22,7 +23,7 @@ export function populateCards() {
   for (let i = 0; i <= 9; i++) {
     decks[i][decks[i].length - 1].isDown = false;
   }
-  return { decks: decks, cards: mixedCards };
+  return { decks: decks, cards: mixedCards, score: score };
 }
 
 function shuffle(array) {
