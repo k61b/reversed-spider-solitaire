@@ -9,6 +9,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
   const [game, setGame] = useState({
     cards: [],
     decks: [],
+    score: 0,
     selectedCard: "",
     selectedDeck: "",
     selected: [],
@@ -26,6 +27,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
       ...prevState,
       cards: val.cards,
       decks: val.decks,
+      score: val.score,
     }));
   }
 
@@ -45,6 +47,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
         minutes={minutes}
         hours={hours}
         reset={reset}
+        game={game}
       />
       <GameTool cards={cards} game={game} setGame={setGame} />
       <GameContent cards={cards} game={game} setGame={setGame} />
