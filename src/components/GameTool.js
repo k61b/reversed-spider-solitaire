@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react/cjs/react.development";
 import { distributeRemCards } from "../logic/index";
 
 export function GameTool({ cards, game, setGame, hands }) {
-  const [hand, setHand] = useState(0);
-
-  useEffect(() => {
-    if (hands) setHand(hands);
-  }, [hands, setHand]);
-
   function rightGameToolItems() {
     let arr = [];
     for (let i = 0; i < 8; i++) {
       arr.push(<div key={i} className="game-tool-item"></div>);
-      for (let j = 0; j < hand; j++) {
+      for (let j = 0; j < hands; j++) {
         arr[j] = <div key={j} className="game-tool-item card__down"></div>;
       }
     }
