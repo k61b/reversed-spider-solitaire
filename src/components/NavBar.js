@@ -2,6 +2,7 @@ export function NavBar({ handleClick, seconds, minutes, hours, reset, game }) {
   function handleReset() {
     handleClick();
     reset();
+    game.hands = 0;
   }
 
   return (

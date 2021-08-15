@@ -5,10 +5,11 @@ export function GameTool({ cards, game, setGame, hands }) {
     let arr = [];
     for (let i = 0; i < 8; i++) {
       arr.push(<div key={i} className="game-tool-item"></div>);
+    }
+    if (hands > 0)
       for (let j = 0; j < hands; j++) {
         arr[j] = <div key={j} className="game-tool-item card__down"></div>;
       }
-    }
     return arr.map(e => e);
   }
 
