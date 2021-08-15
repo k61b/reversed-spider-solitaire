@@ -49,7 +49,12 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
         reset={reset}
         game={game}
       />
-      <GameTool cards={cards} game={game} setGame={setGame} />
+      <GameTool
+        cards={cards}
+        game={game}
+        setGame={setGame}
+        hands={game.hands}
+      />
       <GameContent cards={cards} game={game} setGame={setGame} />
     </div>
   );
