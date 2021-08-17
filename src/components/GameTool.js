@@ -15,14 +15,16 @@ export function GameTool({ cards, game, setGame, hands }) {
 
   return (
     <div className="game-tools">
-      {cards.hasOwnProperty("decks") && game.decks[10].length > 0 && (
-        <div
-          onClick={e => {
-            distributeRemCards(game, setGame);
-          }}
-          className="left-game-tool game-tool-card"
-        ></div>
-      )}
+      <div className="left-game-tool">
+        {cards.hasOwnProperty("decks") && game.decks[10].length > 0 && (
+          <div
+            onClick={e => {
+              distributeRemCards(game, setGame);
+            }}
+            className="game-tool-card"
+          ></div>
+        )}
+      </div>
       <div className="right-game-tool">{rightGameToolItems()}</div>
     </div>
   );
