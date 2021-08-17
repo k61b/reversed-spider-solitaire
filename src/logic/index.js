@@ -77,11 +77,9 @@ export function removeSelection(game, setgame) {
 
 export function selectCard(card, deck, holder, game, setgame) {
   if (holder && game.selectedCard !== "") {
-    if (game.selectedCard.rank === "A") {
-      moveCards(deck, game.selectedDeck, game.selectedCard, setgame, game);
-      isHandComplete(deck, game, setgame);
-      removeSelection(game, setgame);
-    }
+    moveCards(deck, game.selectedDeck, game.selectedCard, setgame, game);
+    isHandComplete(deck, game, setgame);
+    removeSelection(game, setgame);
   }
   let tempCard = card;
   if (game.selectedCard === "") {
