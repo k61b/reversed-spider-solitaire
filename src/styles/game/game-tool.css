@@ -1,5 +1,4 @@
 .game-tools {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,18 +9,18 @@
   display: flex;
   border: 1px solid var(--dark-color);
   cursor: pointer;
-  width: 7vw;
-  height: 9.8vw;
+  width: var(--card-width);
+  height: var(--card-height);
   border-radius: 0.3vw;
-  box-shadow: 5px 5px 5px 5px rgba(250, 250, 250, 0.5);
+  box-shadow: var(--main-box-shadow);
 }
 
 .game-tool-card {
   display: flex;
   border: 1px solid var(--dark-color);
   cursor: pointer;
-  width: 7vw;
-  height: 9.8vw;
+  width: var(--card-width);
+  height: var(--card-height);
   border-radius: 0.3vw;
   background-size: contain;
   background-repeat: no-repeat;
@@ -32,13 +31,13 @@
 .right-game-tool {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: var(--min-gap);
 }
 
 .game-tool-item {
   border: 1px solid var(--dark-color);
-  box-shadow: 5px 5px 5px 5px rgba(250, 250, 250, 0.5);
-  width: 7vw;
-  height: 9.8vw;
+  box-shadow: var(--main-box-shadow);
+  width: var(--card-width);
+  height: var(--card-height);
   border-radius: 0.3vw;
 }

@@ -2,8 +2,8 @@
   position: relative;
   border: 2px solid blue;
   cursor: pointer;
-  width: 7vw;
-  height: 9.8vw;
+  width: var(--card-width);
+  height: var(--card-height);
   border-radius: 0.3vw;
   opacity: 0.5;
   background-color: black;
@@ -12,8 +12,8 @@
 .cardholder__bg {
   position: relative;
   cursor: pointer;
-  width: 7vw;
-  height: 9.8vw;
+  width: var(--card-width);
+  height: var(--card-height);
   border-radius: 0.3vw;
   background-size: contain;
   background-repeat: no-repeat;

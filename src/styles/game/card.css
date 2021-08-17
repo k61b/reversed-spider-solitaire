@@ -2,8 +2,8 @@
   position: relative;
   border: 1px solid var(--dark-color);
   cursor: pointer;
-  width: 7vw;
-  height: 9.8vw;
+  width: var(--card-width);
+  height: var(--card-height);
   border-radius: 0.3vw;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .card__selected {
-  box-shadow: 10px 10px 12px black !important;
+  box-shadow: var(--dark-box-showdow);
   border: 2px solid black;
 }
 
@@ -64,12 +64,12 @@
 }
 
 .card:hover {
-  box-shadow: 4px 4px 10px rgb(247, 210, 0);
+  box-shadow: var(--main-box-shadow);
 }
 
 .card__highlighted {
-  box-shadow: 5px 5px 10px red !important;
-  border: 2px solid red;
+  box-shadow: var(--highlight-box-shadow);
+  border: 2px solid rgb(250, 250, 109);
 }
 
 .spade {
@@ -85,7 +85,7 @@
     font-size: 12px;
   }
   .card__selected {
-    border: 2px solid red;
+    border: 2px solid rgb(250, 250, 109);
     box-shadow: none !important;
   }
   .card__highlighted {
@@ -99,7 +99,7 @@
     font-size: 9px;
   }
   .card__selected {
-    border: 2px solid red;
+    border: 2px solid rgb(250, 250, 109);
     box-shadow: none !important;
   }
   .card__highlighted {
@@ -113,7 +113,7 @@
     font-size: 7.5px;
   }
   .card__selected {
-    border: 2px solid red;
+    border: 2px solid rgb(250, 250, 109);
     box-shadow: none !important;
   }
   .card__highlighted {

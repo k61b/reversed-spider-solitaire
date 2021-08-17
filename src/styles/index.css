@@ -2,17 +2,35 @@
 @import "game.css";
 
 :root {
+  /* Colors */
   --main-color: rgb(30, 27, 194);
   --dark-color: #000;
   --light-color: rgb(216, 216, 216);
+  /* Fonts */
   --min-font-size: 1rem;
   --mid-font-size: 1.5rem;
   --max-font-size: 3rem;
+  --x-max-font-size: 4rem;
+  --min-font-weight: 400;
+  --mid-font-weight: 700;
+  --max-font-weight: 900;
+  /* Extent */
+  --card-width: 7vw;
+  --card-height: 9.8vw;
+  --s-min-gap: 0.5rem;
+  --min-gap: 1rem;
+  --mid-gap: 2rem;
+  --max-gap: 3rem;
+  /* Effects */
+  --main-box-shadow: 5px 5px 5px 5px rgba(250, 250, 250, 0.5);
+  --highlight-box-shadow: 5px 5px 10px rgb(250, 250, 109) !important;
+  --dark-box-showdow: 10px 10px 12px black !important;
 }
 
 html,
 body {
   margin: 0;
+  padding: 0;
   font-family: "Source Sans Pro", sans-serif;
   background-color: var(--main-color);
 }
