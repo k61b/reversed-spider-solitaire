@@ -6,7 +6,7 @@
 .game-page {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--mid-gap);
 }
 
 .game-content {

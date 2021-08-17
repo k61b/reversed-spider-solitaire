@@ -1,7 +1,7 @@
-.home-page{
+.home-page {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: var(--max-gap);
 }
 
 .home-title-container {
@@ -13,8 +13,8 @@
 
 .home-title {
   color: var(--light-color);
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: var(--x-max-font-size);
+  font-weight: var(--mid-font-weight);
   padding: 1rem;
 }
 
@@ -29,7 +29,7 @@
   background-color: var(--dark-color);
   color: var(--light-color);
   font-size: var(--max-font-size);
-  font-weight: 700;
+  font-weight: var(--mid-font-weight);
   padding: 1rem;
   border-radius: 1rem;
   transition: all 1s ease;
@@ -38,6 +38,4 @@
 .start-button:hover {
   background-color: var(--light-color);
   color: var(--dark-color);
-  font-size: var(--max-font-size);
-  font-weight: 700;
 }
