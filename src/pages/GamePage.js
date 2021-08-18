@@ -60,7 +60,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
         setGame={setGame}
         hands={game.hands}
       />
-      <ShowError game={game} />
+      <ShowError game={game} />;
       <GameContent cards={cards} game={game} setGame={setGame} />
     </div>
   );

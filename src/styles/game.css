@@ -15,3 +15,11 @@
   justify-content: space-around;
   padding-bottom: 2%;
 }
+
+.show-error {
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: var(--mid-font-size);
+  color: var(--light-color);
+}
