@@ -22,7 +22,7 @@ export function NavBar({ handleClick, seconds, minutes, hours, reset, game }) {
       <div className="navbar-item">
         Highest Score Ever:
         <div className="navbar-board">
-          <span>1000</span>
+          <span>{game.bestScore}</span>
         </div>
       </div>
       <div className="navbar-item">

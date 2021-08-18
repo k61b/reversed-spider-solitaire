@@ -11,6 +11,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
     cards: [],
     decks: [],
     score: 0,
+    bestScore: 0,
     error: "",
     selectedCard: "",
     selectedDeck: "",
@@ -30,6 +31,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
       cards: val.cards,
       decks: val.decks,
       score: val.score,
+      bestScore: val.bestScore,
       error: val.error,
     }));
   }
