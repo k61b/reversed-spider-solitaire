@@ -3,6 +3,7 @@ import { populateCards } from "../logic/game";
 import NavBar from "../components/NavBar";
 import GameContent from "../components/GameContent";
 import GameTool from "../components/GameTool";
+import ShowError from "../components/ShowError";
 
 export default function GamePage({ seconds, minutes, hours, reset }) {
   const [cards, setCards] = useState({});
@@ -10,6 +11,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
     cards: [],
     decks: [],
     score: 0,
+    error: "",
     selectedCard: "",
     selectedDeck: "",
     selected: [],
@@ -28,6 +30,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
       cards: val.cards,
       decks: val.decks,
       score: val.score,
+      error: val.error,
     }));
   }
 
@@ -55,6 +58,7 @@ export default function GamePage({ seconds, minutes, hours, reset }) {
         setGame={setGame}
         hands={game.hands}
       />
+      <ShowError game={game} />
       <GameContent cards={cards} game={game} setGame={setGame} />
     </div>
   );

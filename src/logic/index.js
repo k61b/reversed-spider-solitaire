@@ -107,10 +107,20 @@ export function selectCard(card, deck, holder, game, setgame) {
       moveCards(deck, game.selectedDeck, game.selectedCard, setgame, game);
       isHandComplete(deck, game, setgame);
       removeSelection(game, setgame);
+      errorMessage(setgame, "");
     } else {
       removeSelection(game, setgame);
+      errorMessage(setgame, "Wrong move");
     }
   }
+}
+
+export function errorMessage(setgame, message) {
+  let errorMessage = message;
+  setgame(prevState => ({
+    ...prevState,
+    error: errorMessage,
+  }));
 }
 
 export function moveCards(toDeck, fromDeck, fromCard, setgame, game) {
@@ -184,7 +194,7 @@ export function isHandComplete(deck, game, setgame) {
       hands: curHands + 1,
       score: curScore + 100,
     }));
-    if (curHands + 1 === 8) console.log("Game Over");
+    if (curHands + 1 === 8) alert(`Congratulations, Score: ${game.score}`);
   }
 }
 
