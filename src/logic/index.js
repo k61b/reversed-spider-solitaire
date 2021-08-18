@@ -194,7 +194,12 @@ export function isHandComplete(deck, game, setgame) {
       hands: curHands + 1,
       score: curScore + 100,
     }));
-    if (curHands + 1 === 8) alert(`Congratulations, Score: ${game.score}`);
+    if (curHands + 1 === 8) {
+      alert(`Congratulations, Score: ${game.score}`);
+      let curBestScore = window.localStorage.getItem("bestScore");
+      if (curBestScore < game.score)
+        window.localStorage.setItem("bestScore", game.score);
+    }
   }
 }
 

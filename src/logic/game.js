@@ -4,6 +4,7 @@ export function populateCards() {
   let cards = [];
   let decks;
   let score = 500;
+  let bestScore;
 
   cardInfo["rank"].forEach(rank => {
     for (let i = 1; i <= 8; i++) {
@@ -17,13 +18,19 @@ export function populateCards() {
       });
     }
   });
+  bestScore = window.localStorage.getItem("bestScore");
   let mixedCards = shuffle(cards);
   decks = sliceIntoChunks(mixedCards.slice(0, 50), 5);
   decks[10] = mixedCards.slice(50);
   for (let i = 0; i <= 9; i++) {
     decks[i][decks[i].length - 1].isDown = false;
   }
-  return { decks: decks, cards: mixedCards, score: score };
+  return {
+    decks: decks,
+    cards: mixedCards,
+    score: score,
+    bestScore: bestScore,
+  };
 }
 
 function shuffle(array) {
