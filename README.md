@@ -61,3 +61,4 @@ Kayra Berk Tuncer - [@kayraberktuncer](https://twitter.com/kayraberktuncer) - [k
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [ReactJS](https://reactjs.org/)
+* [React-Solitaire](https://github.com/ashish0910/React-Solitaire)
